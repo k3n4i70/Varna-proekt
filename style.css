@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Хедър */
+header {
+            background-color: #256b7b;
+            color: white;
+            padding: 10px 0;
+        }
+
+
+.logo img {
+    width: 60px;
+    height: auto;
+}
+
+/* Линкове отдясно */
+.side-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.side-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.side-links a:hover {
+    text-decoration: underline;
+}
+
+/* Навигация */
+nav {
+    background-color: #e1f3f5;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin: 0 10px;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background-color: #b0dce0;
+}
+
+/* Hero секция */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    max-height: 85vh;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    width: 90%;
+    max-width: 2000px;
+    padding: 10px;
+}
+
+.hero-text h1 {
+    font-size: 5vw;
+    color: #ffa82f;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 1.3vw;
+    min-font-size: 14px;
+    line-height: 1.6;
+    color: #d5f2f3;
+}
+
+/* Футър */
+footer {
+  background-color: #ffa82f;
+  color: white;
+  text-align: center;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+/* 🔹 Респонсив настройки */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .side-links {
+        align-items: flex-start;
+        margin-top: 5px;
+    }
+
+    .hero-text h1 {
+        font-size: 8vw;
+    }
+
+    .hero-text p {
+        font-size: 3.5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+
+    .hero-text h1 {
+        font-size: 9vw;
+    }
+
+    .hero-text p {
+        font-size: 4vw;
+    }
+}
